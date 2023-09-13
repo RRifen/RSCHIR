@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: appDB
+      MYSQL_USER: User
+      MYSQL_PASSWORD: 123456789
+
+  web_server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8000:80
+    volumes:
+      - ./src:/var/www/html
+    links:
+      - db
+
+volumes:
+  db_data:
