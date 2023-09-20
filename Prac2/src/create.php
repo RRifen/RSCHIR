@@ -1,10 +1,10 @@
 <html lang="en">
 <head>
-<title>Insert page</title>
+<title>Create page</title>
     <link rel="stylesheet" href="style.css" type="text/css"/>
 </head>
 <body>
-<h1>Операция INSERT</h1>
+<h1>Операция CREATE</h1>
 <?php
 if (isset($_POST['name']) && isset($_POST['description'])
     && $_POST['name'] !== '' && $_POST['description'] !== '') {
@@ -20,7 +20,7 @@ if (isset($_POST['name']) && isset($_POST['description'])
     }
 }
 ?>
-<form action="insert.php" method="post">
+<form action="create.php" method="post">
     <label for="name">Good name:</label>
     <input name="name" id="name" type="text">
     </br>
@@ -31,10 +31,11 @@ if (isset($_POST['name']) && isset($_POST['description'])
 </form>
 <h1>Перейти на другую страницу</h1>
 <ul>
-    <?php if (basename($_SERVER['PHP_SELF']) !== 'index.php') echo '<li><a href="index.php">SELECT</a></li>'?>
-    <?php if (basename($_SERVER['PHP_SELF']) !== 'insert.php') echo '<li><a href="insert.php">INSERT</a></li>'?>
-    <?php if (basename($_SERVER['PHP_SELF']) !== 'update.php') echo '<li><a href="update.php">UPDATE</a></li>'?>
-    <?php if (basename($_SERVER['PHP_SELF']) !== 'delete.php') echo '<li><a href="delete.php">DELETE</a></li>'?>
+    <?php if (basename($_SERVER['PHP_SELF']) !== 'index.php') echo '<li><a href="index.php">SELECT ALL</a></li>';
+    if (basename($_SERVER['PHP_SELF']) !== 'create.php') echo '<li><a href="create.php">CREATE</a></li>';
+    if (basename($_SERVER['PHP_SELF']) !== 'read.php') echo '<li><a href="read.php">READ</a></li>';
+    if (basename($_SERVER['PHP_SELF']) !== 'update.php') echo '<li><a href="update.php">UPDATE</a></li>';
+    if (basename($_SERVER['PHP_SELF']) !== 'delete.php') echo '<li><a href="delete.php">DELETE</a></li>'?>
 </ul>
 </body>
 </html>
