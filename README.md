@@ -3,4 +3,4 @@
 # Prac1 - PHP, Docker, MySQL, Apache (Развертывание контейнеров)
 # Prac2 - PHP, Docker, MySQL, Apache (CRUD)
 # Prac3 - PHP, Docker, MySQL, Apache (REST)
-# Prac3 - PHP, Docker, MySQL, Apache, NGINX (NGINX)
+# Prac4 - PHP, Docker, MySQL, Apache, NGINX (NGINX)
