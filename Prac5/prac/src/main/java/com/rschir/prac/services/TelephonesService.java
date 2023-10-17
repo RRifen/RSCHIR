@@ -1,5 +1,6 @@
 package com.rschir.prac.services;
 
+import com.rschir.prac.model.Product;
 import com.rschir.prac.model.Telephone;
 import com.rschir.prac.repositories.TelephonesRepository;
 import com.rschir.prac.util.enums.ProductType;
@@ -31,16 +32,19 @@ public class TelephonesService {
 
     @Transactional
     public Telephone saveOne(Telephone newTelephone) {
-        newTelephone.setProductType(ProductType.ELECTRONIC);
+        newTelephone.getProduct().setProductType(ProductType.ELECTRONIC);
         return telephonesRepository.save(newTelephone);
     }
 
     @Transactional
     public Telephone updateOne(Telephone updatedTelephone, long id) {
         Telephone telephone = telephonesRepository.findById(id).orElseThrow(NotFoundException::new);
-        telephone.setSellerNumber(updatedTelephone.getSellerNumber());
-        telephone.setName(updatedTelephone.getName());
-        telephone.setCost(updatedTelephone.getCost());
+        Product telephoneProduct = telephone.getProduct();
+        Product updatedTelephoneProduct = updatedTelephone.getProduct();
+
+        telephoneProduct.setSellerNumber(updatedTelephoneProduct.getSellerNumber());
+        telephoneProduct.setName(updatedTelephoneProduct.getName());
+        telephoneProduct.setCost(updatedTelephoneProduct.getCost());
         telephone.setBatteryCapacity(updatedTelephone.getBatteryCapacity());
         telephone.setManufacturer(updatedTelephone.getManufacturer());
         return telephonesRepository.save(telephone);

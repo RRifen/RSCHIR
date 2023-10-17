@@ -27,6 +27,7 @@ public class BooksRestController {
     }
 
     @GetMapping
+    @JsonView(Views.Get.class)
     public @ResponseBody List<Book> getBook() {
         return booksService.findAll();
     }

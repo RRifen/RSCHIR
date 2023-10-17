@@ -1,6 +1,8 @@
 package com.rschir.prac.services;
 
+import com.rschir.prac.model.Cart;
 import com.rschir.prac.model.Client;
+import com.rschir.prac.repositories.CartsRepository;
 import com.rschir.prac.repositories.ClientsRepository;
 import com.rschir.prac.util.exceptions.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +15,12 @@ import java.util.List;
 @Transactional(readOnly = true)
 public class ClientsService {
     private final ClientsRepository clientsRepository;
+    private final CartsRepository cartsRepository;
 
     @Autowired
-    public ClientsService(ClientsRepository clientsRepository) {
+    public ClientsService(ClientsRepository clientsRepository, CartsRepository cartsRepository) {
         this.clientsRepository = clientsRepository;
+        this.cartsRepository = cartsRepository;
     }
 
     public Client findOne(long id) {
@@ -29,7 +33,11 @@ public class ClientsService {
 
     @Transactional
     public Client saveOne(Client newClient) {
-        return clientsRepository.save(newClient);
+        Client savedClient = clientsRepository.save(newClient);
+        Cart cart = new Cart();
+        cart.setClientId(savedClient.getClientId());
+        cart.setClient(savedClient);
+        return savedClient;
     }
 
     @Transactional

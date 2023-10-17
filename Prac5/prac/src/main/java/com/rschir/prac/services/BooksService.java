@@ -1,6 +1,7 @@
 package com.rschir.prac.services;
 
 import com.rschir.prac.model.Book;
+import com.rschir.prac.model.Product;
 import com.rschir.prac.util.enums.ProductType;
 import com.rschir.prac.repositories.BooksRepository;
 import com.rschir.prac.util.exceptions.NotFoundException;
@@ -31,17 +32,20 @@ public class BooksService {
 
     @Transactional
     public Book saveOne(Book newBook) {
-        newBook.setProductType(ProductType.BOOK);
+        newBook.getProduct().setProductType(ProductType.BOOK);
         return booksRepository.save(newBook);
     }
 
     @Transactional
     public Book updateOne(Book updatedBook, long id) {
         Book book = booksRepository.findById(id).orElseThrow(NotFoundException::new);
-        book.setSellerNumber(updatedBook.getSellerNumber());
+        Product bookProduct = book.getProduct();
+        Product updatedBookProduct = updatedBook.getProduct();
+
+        bookProduct.setSellerNumber(updatedBook.getProduct().getSellerNumber());
         book.setAuthor(updatedBook.getAuthor());
-        book.setName(updatedBook.getName());
-        book.setCost(updatedBook.getCost());
+        bookProduct.setName(updatedBookProduct.getName());
+        bookProduct.setCost(updatedBookProduct.getCost());
         return booksRepository.save(book);
     }
 

@@ -12,14 +12,18 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "washing_machine")
+@Table(name = "washing_machines")
 public class WashingMachine {
 
     @Id
-    @Column(name = "washing_machine_id", nullable = false)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonView({Views.Get.class})
-    private long washingMachineId;
+    private Long productId;
+
+    @MapsId
+    @OneToOne
+    @JsonView({Views.Post.class})
+    @JoinColumn(name = "product_id", nullable = false)
+    private Product product;
 
     @Column(name = "manufacturer", nullable = false)
     @JsonView({Views.Post.class})
@@ -28,22 +32,5 @@ public class WashingMachine {
     @Column(name = "tank_volume", nullable = false)
     @JsonView({Views.Post.class})
     private int tankVolume;
-
-    @Column(name = "seller_number", nullable = false)
-    @JsonView({Views.Post.class})
-    private int sellerNumber;
-
-    @Column(name = "cost", nullable = false)
-    @JsonView({Views.Post.class})
-    private double cost;
-
-    @Column(name = "name", nullable = false)
-    @JsonView({Views.Post.class})
-    private String name;
-
-    @Enumerated(EnumType.STRING)
-    @Column(name = "product_type", nullable = false)
-    @JsonView({Views.Get.class})
-    private ProductType productType;
 
 }

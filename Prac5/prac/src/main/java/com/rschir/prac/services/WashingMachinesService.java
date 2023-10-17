@@ -1,6 +1,7 @@
 package com.rschir.prac.services;
 
 
+import com.rschir.prac.model.Product;
 import com.rschir.prac.model.WashingMachine;
 import com.rschir.prac.repositories.WashingMachinesRepository;
 import com.rschir.prac.util.enums.ProductType;
@@ -31,18 +32,21 @@ public class WashingMachinesService {
 
     @Transactional
     public WashingMachine saveOne(WashingMachine newWashingMachine) {
-        newWashingMachine.setProductType(ProductType.PLUMBING);
+        newWashingMachine.getProduct().setProductType(ProductType.PLUMBING);
         return washingMachinesRepository.save(newWashingMachine);
     }
 
     @Transactional
     public WashingMachine updateOne(WashingMachine updatedWashingMachine, long id) {
         WashingMachine washingMachine = washingMachinesRepository.findById(id).orElseThrow(NotFoundException::new);
-        washingMachine.setSellerNumber(updatedWashingMachine.getSellerNumber());
+        Product washingMachineProduct = washingMachine.getProduct();
+        Product updatedWashingMachineProduct = updatedWashingMachine.getProduct();
+
+        washingMachineProduct.setSellerNumber(updatedWashingMachineProduct.getSellerNumber());
         washingMachine.setManufacturer(updatedWashingMachine.getManufacturer());
         washingMachine.setTankVolume(updatedWashingMachine.getTankVolume());
-        washingMachine.setName(updatedWashingMachine.getName());
-        washingMachine.setCost(updatedWashingMachine.getCost());
+        washingMachineProduct.setName(updatedWashingMachineProduct.getName());
+        washingMachineProduct.setCost(updatedWashingMachineProduct.getCost());
         return washingMachinesRepository.save(washingMachine);
     }
 
