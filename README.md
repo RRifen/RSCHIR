@@ -5,3 +5,5 @@
 # Prac3 - PHP, Docker, MySQL, Apache (REST)
 # Prac4 - PHP, Docker, MySQL, Apache, NGINX (NGINX)
 # Prac5 - Java, Spring, PostgreSQL
+# Prac6 - Java, Spring, PostgreSQL, Cart, Order
+# Prac7 - Java, Spring, PostgreSQL, Redis, Spring Security
