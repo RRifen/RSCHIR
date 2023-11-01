@@ -1,0 +1,208 @@
+2023/10/31 20:29:18 Server started on port 8080
+2023/10/31 22:11:52 Server started on port 8080
+2023/10/31 22:12:56 Server started on port 8080
+2023/10/31 22:14:41 Server started on port 8080
+2023/10/31 22:14:41 We are here
+2023/10/31 22:15:28 Server started on port 8080
+2023/10/31 22:18:04 Server started on port 8080
+2023/10/31 22:28:55 Server started on port 8080
+2023/10/31 22:28:58 File uploaded with ID:6541557a73df97ac400dfc8e
+2023/10/31 23:07:06 Server started on port 8080
+2023/10/31 23:07:17 File uploaded with ID:65415e758967106bdbed1a3a
+2023/10/31 23:11:01 File uploaded with ID:65415f558967106bdbed1a46
+2023/10/31 23:17:51 Server started on port 8080
+2023/10/31 23:18:03 http: panic serving [::1]:58294: assignment to entry in nil map
+goroutine 6 [running]:
+net/http.(*conn).serve.func1()
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:1868 +0xb9
+panic({0xbf0dc0?, 0xd6b7e0?})
+	C:/Users/gorba/sdk/go1.21.3/src/runtime/panic.go:920 +0x270
+prac_go/pkg/api.getFilesFromGridFS()
+	D:/Edu/Course3/RSCHIR/Prac9/prac_go/pkg/api/api.go:119 +0x2b7
+prac_go/pkg/api.GetFilesHandler({0xd70590, 0xc00039c000}, 0xc00002c630?)
+	D:/Edu/Course3/RSCHIR/Prac9/prac_go/pkg/api/api.go:88 +0x2f
+net/http.HandlerFunc.ServeHTTP(0xc00007c200?, {0xd70590?, 0xc00039c000?}, 0x1?)
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:2136 +0x29
+github.com/gorilla/mux.(*Router).ServeHTTP(0xc000138240, {0xd70590, 0xc00039c000}, 0xc00007c100)
+	C:/Users/gorba/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210 +0x1c5
+net/http.serverHandler.ServeHTTP({0xd6f230?}, {0xd70590?, 0xc00039c000?}, 0x6?)
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:2938 +0x8e
+net/http.(*conn).serve(0xc000388000, {0xd70d70, 0xc000089f50})
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:2009 +0x5f4
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:3086 +0x5cb
+2023/10/31 23:18:04 http: panic serving [::1]:58299: assignment to entry in nil map
+goroutine 75 [running]:
+net/http.(*conn).serve.func1()
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:1868 +0xb9
+panic({0xbf0dc0?, 0xd6b7e0?})
+	C:/Users/gorba/sdk/go1.21.3/src/runtime/panic.go:920 +0x270
+prac_go/pkg/api.getFilesFromGridFS()
+	D:/Edu/Course3/RSCHIR/Prac9/prac_go/pkg/api/api.go:119 +0x2b7
+prac_go/pkg/api.GetFilesHandler({0xd70590, 0xc00039c1c0}, 0xc00002cba0?)
+	D:/Edu/Course3/RSCHIR/Prac9/prac_go/pkg/api/api.go:88 +0x2f
+net/http.HandlerFunc.ServeHTTP(0xc00007c400?, {0xd70590?, 0xc00039c1c0?}, 0x1?)
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:2136 +0x29
+github.com/gorilla/mux.(*Router).ServeHTTP(0xc000138240, {0xd70590, 0xc00039c1c0}, 0xc000340000)
+	C:/Users/gorba/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210 +0x1c5
+net/http.serverHandler.ServeHTTP({0xd6f230?}, {0xd70590?, 0xc00039c1c0?}, 0x6?)
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:2938 +0x8e
+net/http.(*conn).serve(0xc0002a6120, {0xd70d70, 0xc000089f50})
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:2009 +0x5f4
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:3086 +0x5cb
+2023/10/31 23:19:01 Server started on port 8080
+2023/10/31 23:19:07 http: panic serving [::1]:58312: assignment to entry in nil map
+goroutine 68 [running]:
+net/http.(*conn).serve.func1()
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:1868 +0xb9
+panic({0xca0dc0?, 0xe1b7e0?})
+	C:/Users/gorba/sdk/go1.21.3/src/runtime/panic.go:920 +0x270
+prac_go/pkg/api.getFilesFromGridFS()
+	D:/Edu/Course3/RSCHIR/Prac9/prac_go/pkg/api/api.go:119 +0x2b7
+prac_go/pkg/api.GetFilesHandler({0xe20590, 0xc000266000}, 0xc0002245a0?)
+	D:/Edu/Course3/RSCHIR/Prac9/prac_go/pkg/api/api.go:88 +0x2f
+net/http.HandlerFunc.ServeHTTP(0xc000250100?, {0xe20590?, 0xc000266000?}, 0x1?)
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:2136 +0x29
+github.com/gorilla/mux.(*Router).ServeHTTP(0xc000138240, {0xe20590, 0xc000266000}, 0xc000250000)
+	C:/Users/gorba/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210 +0x1c5
+net/http.serverHandler.ServeHTTP({0xe1f230?}, {0xe20590?, 0xc000266000?}, 0x6?)
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:2938 +0x8e
+net/http.(*conn).serve(0xc000330000, {0xe20d70, 0xc000089f50})
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:2009 +0x5f4
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:3086 +0x5cb
+2023/10/31 23:19:08 http: panic serving [::1]:58317: assignment to entry in nil map
+goroutine 71 [running]:
+net/http.(*conn).serve.func1()
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:1868 +0xb9
+panic({0xca0dc0?, 0xe1b7e0?})
+	C:/Users/gorba/sdk/go1.21.3/src/runtime/panic.go:920 +0x270
+prac_go/pkg/api.getFilesFromGridFS()
+	D:/Edu/Course3/RSCHIR/Prac9/prac_go/pkg/api/api.go:119 +0x2b7
+prac_go/pkg/api.GetFilesHandler({0xe20590, 0xc0002661c0}, 0xc000224c30?)
+	D:/Edu/Course3/RSCHIR/Prac9/prac_go/pkg/api/api.go:88 +0x2f
+net/http.HandlerFunc.ServeHTTP(0xc000250300?, {0xe20590?, 0xc0002661c0?}, 0x1?)
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:2136 +0x29
+github.com/gorilla/mux.(*Router).ServeHTTP(0xc000138240, {0xe20590, 0xc0002661c0}, 0xc000126200)
+	C:/Users/gorba/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210 +0x1c5
+net/http.serverHandler.ServeHTTP({0xe1f230?}, {0xe20590?, 0xc0002661c0?}, 0x6?)
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:2938 +0x8e
+net/http.(*conn).serve(0xc000330090, {0xe20d70, 0xc000089f50})
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:2009 +0x5f4
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:3086 +0x5cb
+2023/10/31 23:19:18 Server started on port 8080
+2023/10/31 23:19:20 http: panic serving [::1]:58329: assignment to entry in nil map
+goroutine 50 [running]:
+net/http.(*conn).serve.func1()
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:1868 +0xb9
+panic({0xa50dc0?, 0xbcb7b0?})
+	C:/Users/gorba/sdk/go1.21.3/src/runtime/panic.go:920 +0x270
+prac_go/pkg/api.getFilesFromGridFS()
+	D:/Edu/Course3/RSCHIR/Prac9/prac_go/pkg/api/api.go:120 +0x291
+prac_go/pkg/api.GetFilesHandler({0xbd0570, 0xc00026e000}, 0xc000210d80?)
+	D:/Edu/Course3/RSCHIR/Prac9/prac_go/pkg/api/api.go:88 +0x2f
+net/http.HandlerFunc.ServeHTTP(0xc000240100?, {0xbd0570?, 0xc00026e000?}, 0x1?)
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:2136 +0x29
+github.com/gorilla/mux.(*Router).ServeHTTP(0xc00021c000, {0xbd0570, 0xc00026e000}, 0xc000126200)
+	C:/Users/gorba/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210 +0x1c5
+net/http.serverHandler.ServeHTTP({0xbcf210?}, {0xbd0570?, 0xc00026e000?}, 0x6?)
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:2938 +0x8e
+net/http.(*conn).serve(0xc000322000, {0xbd0d50, 0xc000210840})
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:2009 +0x5f4
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:3086 +0x5cb
+2023/10/31 23:20:30 Server started on port 8080
+2023/10/31 23:23:16 Server started on port 8080
+2023/10/31 23:23:32 Server started on port 8080
+2023/10/31 23:28:25 Server started on port 8080
+2023/10/31 23:28:26 http: panic serving [::1]:58533: Call of bsoncore.Value.Array on objectID type
+goroutine 39 [running]:
+net/http.(*conn).serve.func1()
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:1868 +0xb9
+panic({0x83ad60?, 0xc0000085a0?})
+	C:/Users/gorba/sdk/go1.21.3/src/runtime/panic.go:920 +0x270
+go.mongodb.org/mongo-driver/x/bsonx/bsoncore.Value.Array({0x38?, {0xc0001a8041?, 0xc8e180?, 0xc0002677d0?}})
+	C:/Users/gorba/go/pkg/mod/go.mongodb.org/mongo-driver@v1.12.1/x/bsonx/bsoncore/value.go:454 +0xf8
+go.mongodb.org/mongo-driver/bson.RawValue.Array(...)
+	C:/Users/gorba/go/pkg/mod/go.mongodb.org/mongo-driver@v1.12.1/bson/raw_value.go:161
+prac_go/pkg/api.getFilesFromGridFS()
+	D:/Edu/Course3/RSCHIR/Prac9/prac_go/pkg/api/api.go:119 +0x2ab
+prac_go/pkg/api.GetFilesHandler({0x9905d0, 0xc000258000}, 0xc000226510?)
+	D:/Edu/Course3/RSCHIR/Prac9/prac_go/pkg/api/api.go:88 +0x2f
+net/http.HandlerFunc.ServeHTTP(0xc00023a100?, {0x9905d0?, 0xc000258000?}, 0x1?)
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:2136 +0x29
+github.com/gorilla/mux.(*Router).ServeHTTP(0xc000000300, {0x9905d0, 0xc000258000}, 0xc00023a000)
+	C:/Users/gorba/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210 +0x1c5
+net/http.serverHandler.ServeHTTP({0x98f270?}, {0x9905d0?, 0xc000258000?}, 0x6?)
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:2938 +0x8e
+net/http.(*conn).serve(0xc0002a6120, {0x990db0, 0xc00002df80})
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:2009 +0x5f4
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:3086 +0x5cb
+2023/10/31 23:28:26 http: panic serving [::1]:58538: Call of bsoncore.Value.Array on objectID type
+goroutine 44 [running]:
+net/http.(*conn).serve.func1()
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:1868 +0xb9
+panic({0x83ad60?, 0xc000202258?})
+	C:/Users/gorba/sdk/go1.21.3/src/runtime/panic.go:920 +0x270
+go.mongodb.org/mongo-driver/x/bsonx/bsoncore.Value.Array({0x38?, {0xc000272041?, 0xc8e180?, 0xc0001d97d0?}})
+	C:/Users/gorba/go/pkg/mod/go.mongodb.org/mongo-driver@v1.12.1/x/bsonx/bsoncore/value.go:454 +0xf8
+go.mongodb.org/mongo-driver/bson.RawValue.Array(...)
+	C:/Users/gorba/go/pkg/mod/go.mongodb.org/mongo-driver@v1.12.1/bson/raw_value.go:161
+prac_go/pkg/api.getFilesFromGridFS()
+	D:/Edu/Course3/RSCHIR/Prac9/prac_go/pkg/api/api.go:119 +0x2ab
+prac_go/pkg/api.GetFilesHandler({0x9905d0, 0xc00017a0e0}, 0xc0001945d0?)
+	D:/Edu/Course3/RSCHIR/Prac9/prac_go/pkg/api/api.go:88 +0x2f
+net/http.HandlerFunc.ServeHTTP(0xc00016c200?, {0x9905d0?, 0xc00017a0e0?}, 0x1?)
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:2136 +0x29
+github.com/gorilla/mux.(*Router).ServeHTTP(0xc000000300, {0x9905d0, 0xc00017a0e0}, 0xc00023a300)
+	C:/Users/gorba/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210 +0x1c5
+net/http.serverHandler.ServeHTTP({0x98f270?}, {0x9905d0?, 0xc00017a0e0?}, 0x6?)
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:2938 +0x8e
+net/http.(*conn).serve(0xc0002a61b0, {0x990db0, 0xc00002df80})
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:2009 +0x5f4
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:3086 +0x5cb
+2023/10/31 23:28:57 Server started on port 8080
+2023/10/31 23:29:01 http: panic serving [::1]:58553: Call of bsoncore.Value.Array on objectID type
+goroutine 40 [running]:
+net/http.(*conn).serve.func1()
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:1868 +0xb9
+panic({0x52ad60?, 0xc000202330?})
+	C:/Users/gorba/sdk/go1.21.3/src/runtime/panic.go:920 +0x270
+go.mongodb.org/mongo-driver/x/bsonx/bsoncore.Value.Array({0x38?, {0xc00026e041?, 0x97e180?, 0xc0002d17d0?}})
+	C:/Users/gorba/go/pkg/mod/go.mongodb.org/mongo-driver@v1.12.1/x/bsonx/bsoncore/value.go:454 +0xf8
+go.mongodb.org/mongo-driver/bson.RawValue.Array(...)
+	C:/Users/gorba/go/pkg/mod/go.mongodb.org/mongo-driver@v1.12.1/bson/raw_value.go:161
+prac_go/pkg/api.getFilesFromGridFS()
+	D:/Edu/Course3/RSCHIR/Prac9/prac_go/pkg/api/api.go:119 +0x2ab
+prac_go/pkg/api.GetFilesHandler({0x6805d0, 0xc0002c0000}, 0xc0002a4240?)
+	D:/Edu/Course3/RSCHIR/Prac9/prac_go/pkg/api/api.go:88 +0x2f
+net/http.HandlerFunc.ServeHTTP(0xc0002c6000?, {0x6805d0?, 0xc0002c0000?}, 0x1?)
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:2136 +0x29
+github.com/gorilla/mux.(*Router).ServeHTTP(0xc000000300, {0x6805d0, 0xc0002c0000}, 0xc0003be100)
+	C:/Users/gorba/go/pkg/mod/github.com/gorilla/mux@v1.8.0/mux.go:210 +0x1c5
+net/http.serverHandler.ServeHTTP({0x67f270?}, {0x6805d0?, 0xc0002c0000?}, 0x6?)
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:2938 +0x8e
+net/http.(*conn).serve(0xc0003b2090, {0x680db0, 0xc00002df80})
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:2009 +0x5f4
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Users/gorba/sdk/go1.21.3/src/net/http/server.go:3086 +0x5cb
+2023/10/31 23:29:15 Server started on port 8080
+2023/10/31 23:30:06 Server started on port 8080
+2023/10/31 23:32:46 Server started on port 8080
+2023/10/31 23:33:20 Server started on port 8080
+2023/10/31 23:34:36 Server started on port 8080
+2023/10/31 23:34:40 File uploaded with ID:654164e04a3e8fb224c78943
+2023/10/31 23:49:21 Server started on port 8080
+2023/10/31 23:55:50 Server started on port 8080
+2023/11/01 00:05:02 Server started on port 8080
+2023/11/01 00:05:56 Server started on port 8080
+2023/11/01 00:06:03 Server started on port 8080
+2023/11/01 00:06:20 File uploaded with ID:65416c4c131fa667ae2988d4
+2023/11/01 00:06:35 File uploaded with ID:65416c5b131fa667ae2988d8
+2023/11/01 00:16:11 Server started on port 8080
+2023/11/01 00:19:05 Server started on port 8080
+2023/11/01 00:29:03 Server started on port 8080

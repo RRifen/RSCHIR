@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  go:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./server.log:/app/server.log
+    env_file:
+      - web-variables.env
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
