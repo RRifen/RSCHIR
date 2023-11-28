@@ -1,1 +1,99 @@
 2023/10/31 21:11:35 Server started on port 3000
+2023/11/01 21:51:44 Server started on port 3000
+2023/11/28 19:13:50 Server started on port 3000
+2023/11/28 19:18:52 Error: EOF
+2023/11/28 19:21:44 Error: http: named cookie not present
+2023/11/28 19:23:13 Error: securecookie: base64 decode failed - caused by: illegal base64 data at input byte 168
+2023/11/28 19:23:16 Error: securecookie: base64 decode failed - caused by: illegal base64 data at input byte 168
+2023/11/28 19:23:17 Error: securecookie: base64 decode failed - caused by: illegal base64 data at input byte 168
+2023/11/28 19:23:17 Error: securecookie: base64 decode failed - caused by: illegal base64 data at input byte 168
+2023/11/28 19:23:18 Error: securecookie: base64 decode failed - caused by: illegal base64 data at input byte 168
+2023/11/28 19:27:48 Server started on port 3000
+2023/11/28 19:56:35 Server started on port 3000
+2023/11/28 19:56:44 Error: securecookie: the value is not valid
+2023/11/28 19:56:46 Error: securecookie: the value is not valid
+2023/11/28 20:13:47 Server started on port 3000
+2023/11/28 20:14:12 Error: securecookie: the value is not valid
+2023/11/28 20:14:47 Error: securecookie: the value is not valid
+2023/11/28 20:16:25 Server started on port 3000
+2023/11/28 20:16:32 Error: securecookie: the value is not valid
+2023/11/28 20:18:55 Server started on port 3000
+2023/11/28 20:19:35 Error: securecookie: the value is not valid
+2023/11/28 20:19:42 Error: securecookie: the value is not valid
+2023/11/28 20:21:28 Server started on port 3000
+2023/11/28 20:21:34 Error: securecookie: the value is not valid
+2023/11/28 20:21:35 Error: securecookie: the value is not valid
+2023/11/28 20:21:44 Error: securecookie: the value is not valid
+2023/11/28 20:26:58 Server started on port 3000
+2023/11/28 20:27:00 http: panic serving 172.24.0.3:51272: runtime error: invalid memory address or nil pointer dereference
+goroutine 19 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1868 +0xb9
+panic({0x681a80?, 0x8e1e60?})
+	/usr/local/go/src/runtime/panic.go:920 +0x270
+Prac8/pkg/api.HandleGetcData({0x745450, 0xc000116000}, 0xc0000d1b18?)
+	/app/pkg/api/api.go:82 +0x1c8
+net/http.HandlerFunc.ServeHTTP(0x442080?, {0x745450?, 0xc000116000?}, 0x63e07a?)
+	/usr/local/go/src/net/http/server.go:2136 +0x29
+net/http.(*ServeMux).ServeHTTP(0x91b780?, {0x745450, 0xc000116000}, 0xc0000fc000)
+	/usr/local/go/src/net/http/server.go:2514 +0x142
+net/http.serverHandler.ServeHTTP({0xc00009d230?}, {0x745450?, 0xc000116000?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:2938 +0x8e
+net/http.(*conn).serve(0xc0000f2090, {0x7459b0, 0xc00009d140})
+	/usr/local/go/src/net/http/server.go:2009 +0x5f4
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3086 +0x5cb
+2023/11/28 20:27:21 http: panic serving 172.24.0.3:58860: runtime error: invalid memory address or nil pointer dereference
+goroutine 34 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1868 +0xb9
+panic({0x681a80?, 0x8e1e60?})
+	/usr/local/go/src/runtime/panic.go:920 +0x270
+Prac8/pkg/api.HandleGetcData({0x745450, 0xc0001b8000}, 0xc00019ab18?)
+	/app/pkg/api/api.go:82 +0x1c8
+net/http.HandlerFunc.ServeHTTP(0x442080?, {0x745450?, 0xc0001b8000?}, 0x63e07a?)
+	/usr/local/go/src/net/http/server.go:2136 +0x29
+net/http.(*ServeMux).ServeHTTP(0x91b780?, {0x745450, 0xc0001b8000}, 0xc0001aa000)
+	/usr/local/go/src/net/http/server.go:2514 +0x142
+net/http.serverHandler.ServeHTTP({0xc000184090?}, {0x745450?, 0xc0001b8000?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:2938 +0x8e
+net/http.(*conn).serve(0xc000188000, {0x7459b0, 0xc00009d140})
+	/usr/local/go/src/net/http/server.go:2009 +0x5f4
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3086 +0x5cb
+2023/11/28 20:28:35 Server started on port 3000
+2023/11/28 20:29:04 http: panic serving 172.25.0.2:58870: runtime error: invalid memory address or nil pointer dereference
+goroutine 18 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1868 +0xb9
+panic({0x681a80?, 0x8e1e60?})
+	/usr/local/go/src/runtime/panic.go:920 +0x270
+Prac8/pkg/api.HandleGetcData({0x745450, 0xc0000b4000}, 0xc000050b18?)
+	/app/pkg/api/api.go:82 +0x1c8
+net/http.HandlerFunc.ServeHTTP(0x442080?, {0x745450?, 0xc0000b4000?}, 0x63e07a?)
+	/usr/local/go/src/net/http/server.go:2136 +0x29
+net/http.(*ServeMux).ServeHTTP(0x91b780?, {0x745450, 0xc0000b4000}, 0xc0000a6000)
+	/usr/local/go/src/net/http/server.go:2514 +0x142
+net/http.serverHandler.ServeHTTP({0xc0000900c0?}, {0x745450?, 0xc0000b4000?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:2938 +0x8e
+net/http.(*conn).serve(0xc0000a0000, {0x7459b0, 0xc000101140})
+	/usr/local/go/src/net/http/server.go:2009 +0x5f4
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3086 +0x5cb
+2023/11/28 20:31:57 Server started on port 3000
+2023/11/28 20:32:23 Error: securecookie: base64 decode failed - caused by: illegal base64 data at input byte 188
+2023/11/28 20:39:27 Server started on port 3000
+2023/11/28 20:39:32 http: superfluous response.WriteHeader call from Prac8/pkg/api.HandleGetcData (api.go:81)
+2023/11/28 20:39:32 Error: securecookie: base64 decode failed - caused by: illegal base64 data at input byte 188
+2023/11/28 20:39:33 http: superfluous response.WriteHeader call from Prac8/pkg/api.HandleGetcData (api.go:81)
+2023/11/28 20:39:33 Error: securecookie: base64 decode failed - caused by: illegal base64 data at input byte 188
+2023/11/28 20:39:33 http: superfluous response.WriteHeader call from Prac8/pkg/api.HandleGetcData (api.go:81)
+2023/11/28 20:39:33 Error: securecookie: base64 decode failed - caused by: illegal base64 data at input byte 188
+2023/11/28 20:39:34 http: superfluous response.WriteHeader call from Prac8/pkg/api.HandleGetcData (api.go:81)
+2023/11/28 20:39:34 Error: securecookie: base64 decode failed - caused by: illegal base64 data at input byte 188
+2023/11/28 20:41:23 Server started on port 3000
+2023/11/28 20:41:24 http: superfluous response.WriteHeader call from Prac8/pkg/api.HandleGetcData (api.go:80)
+2023/11/28 20:41:24 Error: securecookie: base64 decode failed - caused by: illegal base64 data at input byte 188
+2023/11/28 20:44:59 Server started on port 3000
+2023/11/28 20:45:46 Error: securecookie: base64 decode failed - caused by: illegal base64 data at input byte 180
+2023/11/28 20:46:00 Error: securecookie: base64 decode failed - caused by: illegal base64 data at input byte 180
