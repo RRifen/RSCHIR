@@ -30,7 +30,13 @@ func HandleSetData(w http.ResponseWriter, r *http.Request) {
 func HandleGetData(w http.ResponseWriter, r *http.Request) {
 	userData, err := GetDataFromCookie(r)
 	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusBadRequest)
+
+		resp := make(map[string]string)
+		resp["message"] = err.Error()
+
+		json.NewEncoder(w).Encode(resp)
 		logger.LogError(err.Error())
 		return
 	}
@@ -64,7 +70,13 @@ func HandleSetcData(w http.ResponseWriter, r *http.Request) {
 func HandleGetcData(w http.ResponseWriter, r *http.Request) {
 	userData, err := GetDataFromCookie(r)
 	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusBadRequest)
+
+		resp := make(map[string]string)
+		resp["message"] = err.Error()
+
+		json.NewEncoder(w).Encode(resp)
 		logger.LogError(err.Error())
 		return
 	}
