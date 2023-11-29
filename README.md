@@ -9,3 +9,4 @@
 # Prac7 - Java, Spring, PostgreSQL, Redis, Spring Security
 # Prac8 - Golang, Cookie, Nginx
 # Prac9 - Golang, MongoDB, GridFS, Nginx
+# Prac10 - Golang, gRPC, gRPC-Gateway, Nginx
