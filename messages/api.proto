@@ -1,0 +1,32 @@
+syntax = "proto3";
+package pb;
+option go_package = "/pb";
+import "google/api/annotations.proto";
+
+service Gateway {
+  rpc PostMessage(MessageText) returns (MessageText) {
+    option (google.api.http) = {
+      post: "/post"
+      body: "*"
+    };
+  }
+  rpc GetMessage(Message) returns (MessageText) {
+    option (google.api.http) = {
+      get: "/get/{id}"
+    };
+  }
+  rpc DeleteMessage(Message) returns (MessageText) {
+    option (google.api.http) = {
+      delete: "/delete/{id}"
+    };
+  }
+}
+
+message Message {
+  uint64 id = 1;
+}
+
+message MessageText {
+  uint64 id = 1;
+  string message = 2;
+}
