@@ -1,0 +1,32 @@
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
+      - ./data/db:/var/lib/postgresql/data
+    ports:
+      - 9932:5432
+    restart: always
+
+  python:
+    build: ./django
+    command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  java:
+    image: 'spring-boot-marketplace_pg'
+    build:
+      context: ./java
+    container_name: java
+    depends_on:
+      - python
+      - db
+    ports:
+      - "8080:8080"
