@@ -10,3 +10,5 @@
 # Prac8 - Golang, Cookie, Nginx
 # Prac9 - Golang, MongoDB, GridFS, Nginx
 # Prac10 - Golang, gRPC, gRPC-Gateway, Nginx
+# Prac11 - Python, Django
+# Prac12 - Python, Django, Matplotlib, Postgres
